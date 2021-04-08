@@ -10,7 +10,9 @@ INSERT_UPDATE CMSLinkComponent;$contentCV[unique=true];uid[unique=true];name;url
 ;;ConsultResultLink;Option Manage Link;https://e4sqas.yddop.com/assistantBackmanage/index.html#/assistant/consultResult;咨询记录;ConsultResultLink;ConsultResultLink;;
 ;;DdcAllocationRecordLink;DDC Allocation Record Link;https://e4sqas.yddop.com/assistantBackmanage/index.html#/assistant/ddcAllocationRecord;电销员分配记录;DdcAllocationRecordLink;DdcAllocationRecordLink;;
 ;;ClueManageLink;Clue Manage Link;https://e4sqas.yddop.com/assistantBackmanage/index.html#/assistant/cluesTotheManagement;线索管理;ClueManageLink;ClueManageLink;;
+;;ClueManageXmtLink;Clue XMT Manage Link;https://e4sqas.yddop.com/assistantBackmanage/index.html#/assistant/cluesOfNewMedia;线索管理(新媒体);ClueManageXmtLink;ClueManageXmtLink;;
 ;;PotentailManageLink;Potentail Manage Link;https://e4sqas.yddop.com/assistantBackmanage/index.html#/assistant/potentailManagement;潜客管理;PotentailManageLink;PotentailManageLink;;
+;;PotentailManageXmtLink;Potentail XMT Manage Link;https://e4sqas.yddop.com/assistantBackmanage/index.html#/assistant/potentailOfNewMedia;潜客管理(新媒体);PotentailManageXmtLink;PotentailManageXmtLink;;
 ;;RepositoryLink;Repository Link;https://e4sqas.yddop.com/assistantBackmanage/index.html#/assistant/repository;资源库;RepositoryLink;RepositoryLink;;
 ;;MyPotentailLink;My Potentail Link;https://e4sqas.yddop.com/assistantBackmanage/index.html#/assistant/myPotentail;我的潜客;MyPotentailLink;MyPotentailLink;;
 ;;PublicCluesLink;Public Clues Link;https://e4sqas.yddop.com/assistantBackmanage/index.html#/assistant/publicClues;DCC公共线索;PublicCluesLink;PublicCluesLink;;
