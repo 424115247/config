@@ -1,0 +1,167 @@
+
+$contentCatalog=yongdaContentCatalog
+$contentCV=catalogVersion(CatalogVersion.catalog(Catalog.id[default=$contentCatalog]),CatalogVersion.version[default=Online])[default=$contentCatalog:Online]
+INSERT_UPDATE CMSLinkComponent;$contentCV[unique=true];uid[unique=true];name;url;linkName[lang=zh];&linkRef;&componentRef;target(code)[default='sameWindow'];
+
+########## 潜客日志菜单 start
+;;ConfigurationManageLink;Configuration Manage Link;https://e4sqas.yddop.com/assistantBackmanage/index.html#/assistant/configurationManagement;配置管理;ConfigurationManageLink;ConfigurationManageLink;;
+;;CustomerInformationLink;Customer Information Link;https://e4sqas.yddop.com/assistantBackmanage/index.html#/assistant/customerInformation;客户信息;CustomerInformationLink;CustomerInformationLink;;
+;;HospitalityManagementLink;Hospitality Manage Link;https://e4sqas.yddop.com/assistantBackmanage/index.html#/assistant/hospitalityManagement;接待管理;HospitalityManagementLink;HospitalityManagementLink;;
+;;ConsultResultLink;Option Manage Link;https://e4sqas.yddop.com/assistantBackmanage/index.html#/assistant/consultResult;咨询记录;ConsultResultLink;ConsultResultLink;;
+;;DdcAllocationRecordLink;DDC Allocation Record Link;https://e4sqas.yddop.com/assistantBackmanage/index.html#/assistant/ddcAllocationRecord;电销员分配记录;DdcAllocationRecordLink;DdcAllocationRecordLink;;
+;;ClueManageLink;Clue Manage Link;https://e4sqas.yddop.com/assistantBackmanage/index.html#/assistant/cluesTotheManagement;线索管理;ClueManageLink;ClueManageLink;;
+;;PotentailManageLink;Potentail Manage Link;https://e4sqas.yddop.com/assistantBackmanage/index.html#/assistant/potentailManagement;潜客管理;PotentailManageLink;PotentailManageLink;;
+;;RepositoryLink;Repository Link;https://e4sqas.yddop.com/assistantBackmanage/index.html#/assistant/repository;资源库;RepositoryLink;RepositoryLink;;
+;;MyPotentailLink;My Potentail Link;https://e4sqas.yddop.com/assistantBackmanage/index.html#/assistant/myPotentail;我的潜客;MyPotentailLink;MyPotentailLink;;
+;;PublicCluesLink;Public Clues Link;https://e4sqas.yddop.com/assistantBackmanage/index.html#/assistant/publicClues;DCC公共线索;PublicCluesLink;PublicCluesLink;;
+;;VerticalMediaSettingLink;Vertical Media Setting Link;https://e4sqas.yddop.com/assistantBackmanage/index.html#/systemmanage/verticalMediaSetting;垂媒平台配置;VerticalMediaSettingLink;VerticalMediaSettingLink;;
+;;TestDriveSettingCompanyLink;Test Drive Setting Company Link;https://e4sqas.yddop.com/assistantBackmanage/index.html#/systemmanage/testDriveSettingCompany;企业试乘试驾设置;TestDriveSettingCompanyLink;TestDriveSettingCompanyLink;;
+;;HistoryTestDriveLink;History Test Drive Link;https://e4sqas.yddop.com/assistantBackmanage/index.html#/assistant/historyTestDrive;历史试驾记录;HistoryTestDriveLink;HistoryTestDriveLink;;
+########## 潜客日志菜单 end
+
+########## 展厅日志菜单 start
+;;OptionManageLink;Option Manage Link;https://e4sqas.yddop.com/backmanage/index.html#/displayLog/choiceManagement;选项管理;OptionManageLink;OptionManageLink;;
+;;DisplayConsultResultLink;Display Option Manage Link;https://e4sqas.yddop.com/backmanage/index.html#/displayLog/consultResult;咨询记录;DisplayConsultResultLink;DisplayConsultResultLink;;
+;;ReceptionCountLink;Reception Count Link;https://e4sqas.yddop.com/backmanage/index.html#/displayLog/receptionCount;展厅接待统计;ReceptionCountLink;ReceptionCountLink;;
+;;DccReceptionCountLink;Dcc Reception Count Link;https://e4sqas.yddop.com/backmanage/index.html#/displayLog/dccReceptionCount;DCC接待统计;DccReceptionCountLink;DccReceptionCountLink;;
+;;BannerManageLink;Banner Manage Link;https://e4sqas.yddop.com/backmanage/index.html#/displayLog/bannerManagement;Banner管理;BannerManageLink;BannerManageLink;;
+;;QuestionnaireManageLink;Questionnaire Manage Link;https://e4sqas.yddop.com/backmanage/index.html#/displayLog/questionnaireManagement;留资问卷;QuestionnaireManageLink;QuestionnaireManageLink;;
+;;ConsultantStatusLink;Consultant Status Link;https://e4sqas.yddop.com/backmanage/index.html#/displayLog/Consultantstatus;展厅顾问状态;ConsultantStatusLink;ConsultantStatusLink;;
+;;ConsultantStatusDCCLink;Consultant Status DCC Link;https://e4sqas.yddop.com/backmanage/index.html#/displayLog/ConsultantstatusDCC;DCC顾问状态;ConsultantStatusDCCLink;ConsultantStatusDCCLink;;
+;;CustomerRecordLink;Customer Record Link;https://e4sqas.yddop.com/backmanage/index.html#/displayLog/Customerrecord;展厅客户留资记录;CustomerRecordLink;CustomerRecordLink;;
+;;CustomerRecordDCCLink;Customer Record DCC Link;https://e4sqas.yddop.com/backmanage/index.html#/displayLog/CustomerrecrdDCC;DCC客户留资记录;CustomerRecordDCCLink;CustomerRecordDCCLink;;
+;;DisplayDdcAllocationRecordLink;Display DDC Allocation Record Link;https://e4sqas.yddop.com/backmanage/index.html#/displayLog/ddcAllocationRecord;电销员分配记录;DisplayDdcAllocationRecordLink;DisplayDdcAllocationRecordLink;;
+;;DisplayRadarMapLink;Display RadarMap Link;https://e4sqas.yddop.com/backmanage/index.html#/displayLog/radarMap;使用情况数据分析;DisplayRadarMapLink;DisplayRadarMapLink;;
+;;DisplayStaffManageLink;Display Staff Manage Link;https://e4sqas.yddop.com/backmanage/index.html#/systemmanage/staffManagement;人员管理;DisplayStaffManageLink;DisplayStaffManageLink;;
+;;DisplayStoreManageLink;Display Store Manage Link;https://e4sqas.yddop.com/backmanage/index.html#/systemmanage/storeManage;门店管理;DisplayStoreManageLink;DisplayStoreManageLink;;
+;;DisplayReportAuthorityManageLink;Display Report Authority Manage Link;https://e4sqas.yddop.com/backmanage/index.html#/systemmanage/reportAuthorityManage;数据权限管理;DisplayReportAuthorityManageLink;DisplayReportAuthorityManageLink;;
+########## 展厅日志菜单 end
+
+########## 人车信息菜单 start
+;;VichleInfoLink;Vichle Info Link;https://e4sqas.yddop.com/memoBackmanage/index.html#/carInfo/carInfoManagement;车辆信息;VichleInfoLink;VichleInfoLink;;
+;;AccountManagerLink;Account Manager Link;https://e4sqas.yddop.com/memoBackmanage/index.html#/carInfo/accountManager;客户经理分配;AccountManagerLink;AccountManagerLink;;
+;;CustomerInfoReviewLink;Subscribe CustomerInfoReview Link;https://e4sqas.yddop.com/memoBackmanage/index.html#/subscribe/customerInfoReview;客户信息审核;CustomerInfoReviewLink;CustomerInfoReviewLink;;
+########## 人车信息菜单 end
+
+########## 售后预约菜单 start
+;;SubscribeSubscribeCalendarLink;Subscribe Calendar Link;https://e4sqas.yddop.com/memoBackmanage/index.html#/subscribe/subscribeCalendar;预约日程表;SubscribeSubscribeCalendarLink;SubscribeSubscribeCalendarLink;;
+;;SubscribeTomorrowCustomerLink;Subscribe TomorrowCustomer Link;https://e4sqas.yddop.com/memoBackmanage/index.html#/subscribe/tomorrowCustomer;明日预约确认;SubscribeTomorrowCustomerLink;SubscribeTomorrowCustomerLink;;
+;;SubscribeHistoryLink;Subscribe History Link;https://e4sqas.yddop.com/memoBackmanage/index.html#/subscribe/history;预约历史订单;SubscribeHistoryLink;SubscribeHistoryLink;;
+;;SubscribeSubscribeConfigLink;Subscribe SubscribeConfig Link;https://e4sqas.yddop.com/memoBackmanage/index.html#/subscribe/subscribeConfig;预约设置;SubscribeSubscribeConfigLink;SubscribeSubscribeConfigLink;;
+########## 售后预约菜单 end
+
+########## 售后备忘录菜单 start
+;;MemoFirstPageLink;Memo First Page Link;https://e4sqas.yddop.com/memoBackmanage/index.html#/subscribe/homepage;备忘录首页;MemoFirstPageLink;MemoFirstPageLink;;
+;;HistoryReportLink;History Report Link;https://e4sqas.yddop.com/memoBackmanage/index.html#/memorandum/vehiclesInspectionReportRecord;历史报告记录;HistoryReportLink;HistoryReportLink;;
+;;StatementTaskLink;Statement Task Link;https://e4sqas.yddop.com/memoBackmanage/index.html#/solicitCenter/statement;月度报表;StatementTaskLink;StatementTaskLink;;
+;;KpiItemManageLink;Kpi Item Manage Link;https://e4sqas.yddop.com/memoBackmanage/index.html#/memorandum/kpiProjectMaintenance;KPI项目管理;KpiItemManageLink;KpiItemManageLink;;
+;;SeriesKpiItemManageLink;Series Kpi Item Manage Link;https://e4sqas.yddop.com/memoBackmanage/index.html#/memorandum/kpiCarSeriesProjectMaintenance;车系KPI配置;SeriesKpiItemManageLink;SeriesKpiItemManageLink;;
+########## 售后备忘录菜单 end
+
+########## 招揽中心菜单 start
+;;AftermarketManagerTaskLink;Aftermarket Manager Task Link;https://e4sqas.yddop.com/memoBackmanage/index.html#/solicitCenter/aftermarketManager;售后任务管理;AftermarketManagerTaskLink;AftermarketManagerTaskLink;;
+;;MonthTaskLink;Month Task Link;https://e4sqas.yddop.com/memoBackmanage/index.html#/solicitCenter/monthTask;本月售后招揽;MonthTaskLink;MonthTaskLink;;
+;;ManageTaskLink;Manage Task Link;https://e4sqas.yddop.com/memoBackmanage/index.html#/insurance/insuranceTaskManagement;保险任务管理;ManageTaskLink;ManageTaskLink;;
+;;ManageMonthTaskLink;Month Task Link;https://e4sqas.yddop.com/memoBackmanage/index.html#/insurance/insuranceMonthTask;本月保险招揽;ManageMonthTaskLink;ManageMonthTaskLink;;
+;;PhoneRecordTaskLink;Month Detail Task Link;https://e4sqas.yddop.com/memoBackmanage/index.html#/solicitCenter/phoneRecord;通话记录;PhoneRecordTaskLink;PhoneRecordTaskLink;;
+;;PersonalPhoneRecordTaskLink;Month Detail Task Link;https://e4sqas.yddop.com/memoBackmanage/index.html#/solicitCenter/personalPhoneRecord;我的通话;PersonalPhoneRecordTaskLink;PersonalPhoneRecordTaskLink;;
+;;SolicitationReportTaskLink;Month Detail Task Link;https://e4sqas.yddop.com/memoBackmanage/index.html#/solicitCenter/solicitationReport;月度报表;SolicitationReportTaskLink;SolicitationReportTaskLink;;
+;;CreateTaskLink;Create Task Link;https://e4sqas.yddop.com/memoBackmanage/index.html#/solicitCenter/listOfPotentialCustomers;新建任务;CreateTaskLink;CreateTaskLink;;
+;;SolicitTaskLink;Solicit Task Link;https://e4sqas.yddop.com/memoBackmanage/index.html#/solicitCenter/solicitCenter;招揽任务管理;SolicitTaskLink;SolicitTaskLink;;
+########## 招揽中心菜单 end
+
+########## 保险菜单 start
+;;MyCustomerLink;My Customer Link;https://e4sqas.yddop.com/memoBackmanage/index.html#/insurance/insuranceHomepage;我的客户;MyCustomerLink;MyCustomerLink;;
+;;HistoryInsuranceLink;History Insurance Link;https://e4sqas.yddop.com/memoBackmanage/index.html#/insurance/historyInsuranceRecord;历史保单;HistoryInsuranceLink;HistoryInsuranceLink;;
+;;InsuranceReportLink;Insurance Report Link;https://e4sqas.yddop.com/memoBackmanage/index.html#/insurance/insuranceReport;月度报表;InsuranceReportLink;InsuranceReportLink;;
+########## 保险菜单 end
+
+########## 本月任务菜单 start
+;;FollowUpLink;Follow Up Link;https://e4sqas.yddop.com/memoBackmanage/index.html#/tasksMonth/followUp;本月待跟进客户;FollowUpLink;FollowUpLink;;
+;;PendingHandleLink;Pending Handle Link;https://e4sqas.yddop.com/memoBackmanage/index.html#/tasksMonth/PendingHandle;本月待处理客户;PendingHandleLink;PendingHandleLink;;
+########## 本月任务菜单 end
+
+########## 客户评价菜单 start
+;;EvaluateList;Evaluate List;/evaluate-v/#/evaluate/evaluate;评价明细;EvaluateList;EvaluateList;;
+;;LowEvaluateList;Evaluate List;/evaluate-v/#/lowscore/lowscore;低评价明细;LowEvaluateList;LowEvaluateList;;
+;;EvaluateConfig;Evaluate Config;/evaluate-v/#/config/config;评价配置;EvaluateConfig;EvaluateConfig;;
+########## 客户评价菜单 end
+
+
+
+########## 管理配置菜单 start
+;;AppManageLinkMemo;Task Configuration Link;https://e4sqas.yddop.com/smartBackmanage/index.html#/systemmanage/appManage;应用管理;AppManageLinkMemo;AppManageLinkMemo;;
+;;BrandManageLinkMemo;Brand Manage Link;https://e4sqas.yddop.com/smartBackmanage/index.html#/systemmanage/brandManagement;品牌管理;BrandManageLinkMemo;BrandManageLinkMemo;;
+;;SeriesManageLinkMemo;Series Manage Link;https://e4sqas.yddop.com/smartBackmanage/index.html#/systemmanage/seriesManagement;车系管理;SeriesManageLinkMemo;SeriesManageLinkMemo;;
+;;StaffManageLinkMemo;Staff Manage Link;https://e4sqas.yddop.com/smartBackmanage/index.html#/systemmanage/staffManagement;人员管理;StaffManageLinkMemo;StaffManageLinkMemo;;
+;;StoreManageLinkMemo;Store Manage Link;https://e4sqas.yddop.com/smartBackmanage/index.html#/systemmanage/storeManage;门店管理;StoreManageLinkMemo;StoreManageLinkMemo;;
+;;ReportAuthorityManageLinkMemo;Report Authority Manage Link;https://e4sqas.yddop.com/smartBackmanage/index.html#/systemmanage/reportAuthorityManage;数据权限管理;ReportAuthorityManageLinkMemo;ReportAuthorityManageLinkMemo;;
+;;SubscribeSettingMemo;App Manage Link;https://e4sqas.yddop.com/smartBackmanage/index.html#/systemmanage/subscribeSetting;预约配置;SubscribeSettingMemo;SubscribeSettingMemo;;
+;;StoreSetupMemo;App Manage Link;https://e4sqas.yddop.com/smartBackmanage/index.html#/systemmanage/storeSetup;门店配置;StoreSetupMemo;StoreSetupMemo;;
+;;TaskConfigurationLinkMemo;App Manage Link;https://e4sqas.yddop.com/smartBackmanage/index.html#/systemmanage/taskConfiguration;招揽配置;TaskConfigurationLinkMemo;TaskConfigurationLinkMemo;;
+;;LabelConfigurationLinkMemo;App Manage Link;https://e4sqas.yddop.com/smartBackmanage/index.html#/systemmanage/labelConfiguration;标签配置;LabelConfigurationLinkMemo;LabelConfigurationLinkMemo;;
+;;BUManagementLinkMemo;BU Management Link Memo;https://e4sqas.yddop.com/smartBackmanage/index.html#/systemmanage/BUManagement;事业部管理;BUManagementLinkMemo;BUManagementLinkMemo;;
+########## 管理配置菜单 end
+
+########## 管理配置（潜客）菜单 start
+;;BrandManageLinkAsst;Brand Manage Link;https://e4sqas.yddop.com/smartasstBackmanage/index.html#/systemmanage/brandManagement;品牌管理;BrandManageLinkAsst;BrandManageLinkAsst;;
+;;SeriesManageLinkAsst;Series Manage Link;https://e4sqas.yddop.com/smartasstBackmanage/index.html#/systemmanage/seriesManagement;车系管理;SeriesManageLinkAsst;SeriesManageLinkAsst;;
+;;StaffManageLinkAsst;Staff Manage Link;https://e4sqas.yddop.com/smartasstBackmanage/index.html#/systemmanage/staffManagement;人员管理;StaffManageLinkAsst;StaffManageLinkAsst;;
+;;StoreManageLinkAsst;Store Manage Link;https://e4sqas.yddop.com/smartasstBackmanage/index.html#/systemmanage/storeManage;门店管理;StoreManageLinkAsst;StoreManageLinkAsst;;
+;;ReportAuthorityManageLinkAsst;Report Authority Manage Link;https://e4sqas.yddop.com/smartasstBackmanage/index.html#/systemmanage/reportAuthorityManage;数据权限管理;ReportAuthorityManageLinkAsst;ReportAuthorityManageLinkAsst;;
+;;AppManageLinkAsst;Task Configuration Link;https://e4sqas.yddop.com/smartasstBackmanage/index.html#/systemmanage/appManage;应用管理;AppManageLinkAsst;AppManageLinkAsst;;
+;;TaskConfigurationLinkAsst;App Manage Link;https://e4sqas.yddop.com/smartasstBackmanage/index.html#/systemmanage/taskConfiguration;售后招揽配置;TaskConfigurationLinkAsst;TaskConfigurationLinkAsst;;
+;;LabelConfigurationLinkAsst;App Manage Link;https://e4sqas.yddop.com/smartasstBackmanage/index.html#/systemmanage/labelConfiguration;标签配置;LabelConfigurationLinkAsst;LabelConfigurationLinkAsst;;
+;;TestDriveSettingGroupLink;Test Drive Setting Group Link;https://e4sqas.yddop.com/assistantBackmanage/index.html#/systemmanage/testDriveSettingGroup;集团试乘试驾设置;TestDriveSettingGroupLink;TestDriveSettingGroupLink;;
+########## 管理配置（潜客）菜单 end
+
+INSERT_UPDATE CMSNavigationNode;uid[unique=true];$contentCV[unique=true];name;&nodeRef;children(uid,$contentCV);links(&linkRef);
+;PotentialNode;;潜客日志;PotentialNode;;ConfigurationManageLink,CustomerInformationLink,HospitalityManagementLink,ConsultResultLink,DdcAllocationRecordLink,ClueManageLink,PotentailManageLink,RepositoryLink,MyPotentailLink,PublicCluesLink,VerticalMediaSettingLink,TestDriveSettingCompanyLink,HistoryTestDriveLink
+;DisplaylogNode;;展厅日志;DisplaylogNode;;OptionManageLink,DisplayConsultResultLink,ReceptionCountLink,DccReceptionCountLink,BannerManageLink,QuestionnaireManageLink,ConsultantStatusLink,ConsultantStatusDCCLink,CustomerRecordLink,CustomerRecordDCCLink,DisplayDdcAllocationRecordLink,DisplayRadarMapLink,DisplayStaffManageLink,DisplayStoreManageLink,DisplayReportAuthorityManageLink
+
+;CustomerVichleNode;;人车信息;CustomerVichleNode;;VichleInfoLink,AccountManagerLink,CustomerInfoReviewLink
+;SubscribeNode;;售后预约;SubscribeNode;;SubscribeSubscribeCalendarLink,SubscribeTomorrowCustomerLink,SubscribeHistoryLink,SubscribeSubscribeConfigLink
+;AftersalesMemoNode;;售后备忘录;AftersalesMemoNode;;MemoFirstPageLink,HistoryReportLink,StatementTaskLink,KpiItemManageLink,SeriesKpiItemManageLink
+;SolicitCenterNode;;招揽中心;SolicitCenterNode;;AftermarketManagerTaskLink,MonthTaskLink,ManageTaskLink,ManageMonthTaskLink,PhoneRecordTaskLink,PersonalPhoneRecordTaskLink,SolicitationReportTaskLink,CreateTaskLink,SolicitTaskLink
+;InsuranceNode;;保险;InsuranceNode;;MyCustomerLink,HistoryInsuranceLink,InsuranceReportLink
+;tasksMonthNode;;本月任务;tasksMonthNode;;FollowUpLink,PendingHandleLink
+;EvaluateManageNode;;客户评价;EvaluateManageNode;;EvaluateList,LowEvaluateList,EvaluateConfig
+;SystemConfigNodeMemo;;管理配置;SystemConfigNodeMemo;;AppManageLinkMemo,BrandManageLinkMemo,SeriesManageLinkMemo,StaffManageLinkMemo,StoreManageLinkMemo,ReportAuthorityManageLinkMemo,SubscribeSettingMemo,StoreSetupMemo,TaskConfigurationLinkMemo,LabelConfigurationLinkMemo,BUManagementLinkMemo
+;SystemConfigNodeAsst;;管理配置（潜客）;SystemConfigNodeAsst;;BrandManageLinkAsst,SeriesManageLinkAsst,StaffManageLinkAsst,StoreManageLinkAsst,ReportAuthorityManageLinkAsst,AppManageLinkAsst,TaskConfigurationLinkAsst,LabelConfigurationLinkAsst,TestDriveSettingGroupLink
+;YdSmartRetailNavNode;;智慧零售;YdSmartRetailNavNode;PotentialNode,DisplaylogNode,CustomerVichleNode,SubscribeNode,AftersalesMemoNode,SolicitCenterNode,InsuranceNode,tasksMonthNode,EvaluateManageNode,SystemConfigNodeMemo,SystemConfigNodeAsst
+
+INSERT_UPDATE YdButton;bid[unique=true];bname;bdescribe;subBtnList(bid)
+;RadarMapManage1;设置;使用情况数据分析 设置;
+;RadarMapManage2;搜索;使用情况数据分析 搜索;
+;KpiItemManage1;新增项目;KPI项目管理 新增项目;
+;KpiItemManage2;修改;KPI项目管理 修改;
+;KpiItemManage3;删除;KPI项目管理 删除;
+;SeriesKpiItemManage1;下载模板;车系KPI配置 下载模板;
+;SeriesKpiItemManage2;导入;车系KPI配置 导入;
+;SeriesKpiItemManage4;删除;车系KPI配置 删除;
+;HistoryReport1;导出excel;历史报告记录 导出excel;
+;HistoryReport2;导入excel;历史报告记录 导入excel;
+;HistoryReport3;下载导入模板;历史报告记录 下载导入模板;
+;HistoryReport4;修改;历史报告记录 修改;
+;HistoryReport5;维护;历史报告记录 维护;
+;HistoryReport6;删除;历史报告记录 删除;
+;CreateTask1;导出excel;新建任务 导出excel;
+;CreateTask2;全部分配;新建任务 全部分配;
+;SolicitTask1;明细;招揽任务管理 明细;
+;SolicitTask2;删除;招揽任务管理 删除;
+;VichleInfo1;搜索;车辆信息 搜索;
+;VichleInfo2;导入excel;车辆信息 导入excel;
+;HistoryInsurance1;修改;历史保单 修改;
+;HistoryInsurance2;维护;历史保单 维护;
+;MyCustomer1;拨打电话;我的客户 拨打电话;
+
+INSERT_UPDATE CMSLinkComponent;uid[unique=true];linkName[lang=zh];btnGroups(bid);
+;DisplayRadarMapLink;使用情况数据分析;RadarMapManage1,RadarMapManage2
+;KpiItemManageLink;KPI项目管理;KpiItemManage1,KpiItemManage2,KpiItemManage3
+;SeriesKpiItemManageLink;车系KPI配置;SeriesKpiItemManage1,SeriesKpiItemManage2,SeriesKpiItemManage4
+;HistoryReportLink;历史报告记录;HistoryReport1,HistoryReport2,HistoryReport3,HistoryReport4,HistoryReport5,HistoryReport6
+;CreateTaskLink;新建任务;CreateTask1,CreateTask2
+;SolicitTaskLink;招揽任务管理;SolicitTask1,SolicitTask2
+;VichleInfoLink;车辆信息;VichleInfo1,VichleInfo2
+;HistoryInsuranceLink;历史保单;HistoryInsurance1,HistoryInsurance2
+;MyCustomerLink;我的客户;MyCustomer1
