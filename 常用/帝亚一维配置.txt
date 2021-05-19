@@ -1,0 +1,65 @@
+dev
+https://platform.sharptools.cn/
+dy_zhangjianling   123
+dy01/123456
+
+47.103.34.104  root 服务器地址 账号
+/data/log/smartServer 日志地址
+
+hybris123@Mysql
+
+
+tail -fn 500 /data/log/smartServer/log_debug.log
+tail -fn 500 /data/log/smartServer/log_info.log
+tail -fn 500 /data/log/smartServer/log_error.log
+tail -fn 500 /data/log/inventory-server/log_info.log
+cat -n /data/log/smartServer/log_debug.log  |grep "Source must not be null"
+
+cat -n /data/log/inventory-server/log_info.log  |grep "18320210513"
+
+跳板机
+47.103.38.145
+
+PROD
+https://market-prod.inktech.ltd/login
+正式环境：  tongbing  密码  1
+renguozhong  123456
+
+jenkins
+dev环境
+https://jenkins.sharptools.cn/
+deploy
+12345678
+prd环境
+http://mk2-prd-jenkins.inktech.ltd/			admin	mk2-nimda
+
+服务器配置
+https://li47j1vhvb.feishu.cn/sheets/shtcnrzdbanbXsJnb3RsdDXHjSb?sheet=0jeqOa
+
+链接redis命令
+docker exec -it 5245efd8f01a redis-cli -p 16001
+
+
+
+pre环境
+应用服务器: 47.102.47.236 (172.27.153.75)
+nginx: 106.14.200.212 (172.27.153.77)
+
+
+励齐服务器
+(dev)jenkins https://jenkins.sharptools.cn (172.19.176.249:9999)
+       用户名  deploy  密码  12345678
+(dev)访问地址 https://automobile.sharptools.cn
+nginx: 106.14.200.212 (172.27.153.77)
+应用服务器: 47.102.47.236 (172.27.153.75) 中台,OA,财务,库存,销售,售后 (dev) 线索(pre)
+应用服务器: 47.103.34.104 (172.27.153.76) 线索(dev), 中台,OA,财务,库存(pre)
+系统服务器: 47.102.42.20 (172.27.153.69) redis, mq (https://automobile.sharptools.cn/rocketmqconsole/#/ [admin/ad@min_123A])
+系统服务器: 
+   47.103.38.145 (172.27.153.74) mysql 
+   hybris   hybris123@Mysql
+   root  root123@Mysql
+   CREATE USER 'mysql'@'%' IDENTIFIED BY 'Mysql#123';
+   
+   
+https://jira.sharptools.cn/secure/BrowseProjects.jspa?selectedCategory=all
+zhangjianling 123456

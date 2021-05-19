@@ -1,0 +1,83 @@
+潜客prd环境
+mysql账号
+rm-uf62l63r712cc2472.mysql.rds.aliyuncs.com
+3306
+ydsmartreadonly
+Ydretail#5432
+
+prdmongo
+192.168.10.90
+27017
+
+桥接地址：
+43.254.46.186
+9093
+root
+
+连接信息-开发环境
+192.168.0.144
+3306
+ydzhls01
+Ydzhls#123
+库名：smart_asst
+数据库：QAS环境
+192.168.20.20:3307
+root
+库名：smart_asst
+prd环境
+43.254.46.186
+9093
+root
+Sap#12345
+
+统一密码
+Dev#12345
+
+
+git相关
+https://43.254.46.186/root/smart_retail
+10:32
+jianling.zhang
+123456789
+这个是潜客的git地址
+账号  allen.zhao
+密码：zhao354260
+
+查看日志
+tail -100f /data/smart_retail_asst/qas/log/assistant-log.file > my.log
+tail -100f /data/smart_retail_asst/pre/log/assistant-log.file > my.log
+tail -fn 500 /data/smart_retail_asst/qas/log/assistant-log.file
+tail -fn 500 /data/smart_retail_asst/pre/log/assistant-log.file
+cat -n /data/smart_retail_asst/qas/log/assistant-log.file  |grep "系统异常"
+tail -n +103337 /data/smart_retail_asst/qas/log/assistant-log.file
+tail -n +362 -n 50 /data/smart_retail_asst/qas/log/assistant-log.file
+cat -n /data/smart_retail_asst/qas/log/assistant-log.file | tail -n +362 | head -n 100
+
+nginx环境重启
+cd /opt/nginx-1.12.2/sbin
+ps -ef|grep nginx
+./nginx -t
+./nginx -s reload
+
+项目环境
+https://e4s.yddop.com/bigscreenasst/index.html#/   正式环境大屏
+
+东东接口文档
+https://li47j1vhvb.feishu.cn/docs/doccnTD6YPMHSHKuUKG0Zq97lYc#
+
+jenkins
+dev      yongda123
+pre       yongda369
+#### Window远程桌面   jenkins
+IP：43.240.124.27
+端口：7907
+用户名：dev
+密码：yongda@123
+
+跳板机
+dev     yongda@123
+
+QAS环境 tq信息
+https://workphoneuat.yddop.com/#/wxRecord
+Ydtest Ydtest@123
+
