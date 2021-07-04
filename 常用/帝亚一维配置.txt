@@ -31,7 +31,7 @@ https://jenkins.sharptools.cn/
 deploy
 12345678
 prd环境
-http://mk2-prd-jenkins.inktech.ltd/			admin	mk2-nimda
+https://mk2-prd-jenkins.inktech.ltd/			admin	mk2-nimda
 
 服务器配置
 https://li47j1vhvb.feishu.cn/sheets/shtcnrzdbanbXsJnb3RsdDXHjSb?sheet=0jeqOa
