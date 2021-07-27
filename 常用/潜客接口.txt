@@ -2,3 +2,10 @@
 大屏-呼叫-/callSale
 展厅-完善客户资料-按钮是否显示-/findWhetherToJump
 展厅-保存客户-/editCustomerAdvisoryQuestion
+
+本地微信登录
+http://localhost:8080/smartretailasst/login/wechat?userId=18320779255&appType=asstWechat&param=null&error=false
+本地多门店查询
+http://localhost:8080/smartretailasst/login/queryAccountList
+
+

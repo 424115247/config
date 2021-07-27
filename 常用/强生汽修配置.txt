@@ -1,0 +1,31 @@
+git
+https://git.sharptools.cn/root/shuyue_warehouse.git
+haohua.rong 12345678
+
+UAT跳板机
+117.185.15.57 22 
+root Jiushi@123
+UAT数据库配置
+10.10.233.30 3306
+hybris hybris123@Mysql
+shuyue_inventory_uat
+
+PRD跳板机
+117.185.15.64 22
+root Jiushi@123
+PRD数据库配置
+10.10.233.53 3306
+root hybris123@Mysql456
+shuyue_inventory_uat
+
+jenkins
+http://117.185.15.57:8081/view/UAT/
+deploy
+12345678
+
+测试环境：https://117.185.15.57:8443/
+汽配账号：QSadmin  密码：1
+修理厂：PDadmin  密码：1
+生产环境：https://117.185.15.64:8443/
+汽配账号：QSadmin   密码：1   库管账号：yanziping   密码:1
+修理厂：PDamdin   密码：1   库管账号：chenzhaoyou  密码:1

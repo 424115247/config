@@ -3,3 +3,6 @@ cd /opt/nginx-1.12.2/sbin
 ps -ef|grep nginx
 ./nginx -t
 ./nginx -s reload
+
+
+cd /usr/sbin/nginx

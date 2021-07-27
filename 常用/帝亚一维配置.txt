@@ -11,6 +11,7 @@ hybris123@Mysql
 
 tail -fn 500 /data/log/smartServer/log_debug.log
 tail -fn 500 /data/log/smartServer/log_info.log
+tail -fn 500 /data/dyreport/log/dyreport-2021-07-14.log
 tail -fn 500 /data/log/smartServer/log_error.log
 tail -fn 500 /data/log/inventory-server/log_info.log
 cat -n /data/log/smartServer/log_debug.log  |grep "Source must not be null"
@@ -63,3 +64,6 @@ nginx: 106.14.200.212 (172.27.153.77)
    
 https://jira.sharptools.cn/secure/BrowseProjects.jspa?selectedCategory=all
 zhangjianling 123456
+
+帝亚潜客报表
+https://li47j1vhvb.feishu.cn/docs/doccnT6z0nGYCWOR0b8JVE0WSgb
