@@ -134,6 +134,9 @@ select * from ((select
 -- 判断是否有重复同步的账号
 select t1.* from tbl_employee t1 LEFT JOIN tbl_employee t2 on t1.id != t2.id and t1.dop_name = t2.dop_name and t1.mobile_phone = t2.mobile_phone
 where  t1.store_id = 491 and  t2.store_id = 491
+-- 查询企微账号的员工门店信息
+select ts.store_name,te.id, te.dop_user_id, te.dop_name,te.wechat_id,te.delete_flag from tbl_employee te LEFT JOIN tbl_store ts on te.store_id = ts.id
+where te.wechat_id = '56060'
 
 --展厅排班
 SELECT e.id AS id,
@@ -156,3 +159,7 @@ SELECT e.id AS id,
 		AND s.store_id = 491
 		AND s.exhibition_reception_status ='116002'
 			AND s.exhibition_schedule_status='115001'
+-- TQ微信聊天记录履历			
+select tpc.*from tbl_potential_customer tpc  LEFT JOIN tbl_a_follow taf on tpc.id = taf.potential_id
+where taf.follow_type = '148005' and tpc.store_id = 9
+

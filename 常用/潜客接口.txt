@@ -1,5 +1,6 @@
 
 大屏-呼叫-/callSale
+我的潜客-呼叫-backmanage/holly/call
 展厅-完善客户资料-按钮是否显示-/findWhetherToJump
 展厅-保存客户-/editCustomerAdvisoryQuestion
 
@@ -9,3 +10,8 @@ http://localhost:8080/smartretailasst/login/wechat?userId=18320779255&appType=as
 http://localhost:8080/smartretailasst/login/queryAccountList
 
 
+https://e4sqas.yddop.com/assistantWechat/#/component/potentialLogbc?token=0f4d9603f46c1f0c3770e030d87bba0e
+
+https://e4spre.yddop.com/assistantWechat/#/component/potentialLogbc?token=a2a62bcf679c6f18b6b2f180a75445b4
+
+https://e4s.yddop.com/assistantWechat/#/component/potentialLogbc?token=e39c8f416569eeab3518e3d2c572f333
