@@ -83,3 +83,7 @@ Ydtest Ydtest@123
 
 https://ecm.yddop.com/
 yd1009703/YDsap123
+
+汽车之家开放平台
+https://iys.api.autohome.com.cn/help/
+yongda	yongda123Abc
