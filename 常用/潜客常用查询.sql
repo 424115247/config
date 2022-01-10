@@ -134,6 +134,16 @@ select * from ((select
 -- 判断是否有重复同步的账号
 select t1.* from tbl_employee t1 LEFT JOIN tbl_employee t2 on t1.id != t2.id and t1.dop_name = t2.dop_name and t1.mobile_phone = t2.mobile_phone
 where  t1.store_id = 491 and  t2.store_id = 491
+
+select t1.* from tbl_employee t1 LEFT JOIN tbl_employee t2 on t1.id != t2.id and t1.dop_user_id = t2.dop_user_id 
+where  t1.store_id = 274 and  t2.store_id = 274
+
+select id,dop_user_id,dop_name,store_id,mobile_phone from tbl_employee where dop_name in (select t1.dop_name from tbl_employee t1 LEFT JOIN tbl_employee t2 on t1.id != t2.id 
+where t1.dop_name = t2.dop_name and t1.mobile_phone = t2.mobile_phone and t1.store_id = t2.store_id) order by dop_name
+
+select id,dop_user_id,dop_name,store_id,mobile_phone from tbl_employee where dop_user_id in (select t1.dop_user_id from tbl_employee t1 LEFT JOIN tbl_employee t2 on t1.id != t2.id 
+where t1.dop_user_id = t2.dop_user_id  and t1.store_id = t2.store_id) order by dop_user_id
+
 -- 查询企微账号的员工门店信息
 select ts.store_name,te.id, te.dop_user_id, te.dop_name,te.wechat_id,te.delete_flag from tbl_employee te LEFT JOIN tbl_store ts on te.store_id = ts.id
 where te.wechat_id = '56060'
@@ -163,3 +173,10 @@ SELECT e.id AS id,
 select tpc.*from tbl_potential_customer tpc  LEFT JOIN tbl_a_follow taf on tpc.id = taf.potential_id
 where taf.follow_type = '148005' and tpc.store_id = 9
 
+-- 潜客履历记录
+select (select dic_name from tbl_dictionary where dic_code = history_type),(select dic_name from tbl_dictionary where dic_code = follow_type),(select dic_name from tbl_dictionary where dic_code = trend_type),
+(select dop_name from tbl_employee te where te.id = taf.follow_person) as '跟进人',taf.follow_person,(select dop_name from tbl_employee  te where te.id = cast(taf.create_user as SIGNED)) as '创建人',taf.create_user from tbl_a_follow taf where potential_id = 439751 order by create_time desc
+
+select (select dic_name from tbl_dictionary where dic_code = history_type),(select dic_name from tbl_dictionary where dic_code = trend_type),
+(select dop_name from tbl_employee te where te.id = taf.follow_person) as '跟进人',(select dop_name from tbl_employee  te where te.id = cast(taf.create_user as SIGNED)) as '创建人',taf.follow_time,tpc.`name`,tpc.mobile_phone,tpc.clue_type
+from tbl_a_follow taf  left join tbl_potential_customer tpc on taf.potential_id = tpc.id where tpc.store_id = 302 and trend_type = 150003 and date_format(taf.follow_time,'%Y-%m') = '2021-11'  order by taf.create_time desc

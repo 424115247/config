@@ -1,4 +1,20 @@
+QAS潜客日志：
+网址：https://ecmqas.yddop.com/
+账号/密码：yd0037296     sap123（吴松玲）    18989653430
+账号/密码：yd1013728     sap123（俞利聪）    13641970861
+
+PRE潜客日志：
+网址：https://ecmpre.yddop.com/login
+
+PRD潜客日志：
+网址：https://ecm.yddop.com/
+yd1002915  韩秀云   ydprd2021
+yd0042388 潘大地 ydprd2021
+https://e4s.yddop.com/assistantWechat/#/component/potentialLogbc?token=697457a5a6489ebf435f7b5bdbc9fbc7
+
+
 潜客prd环境
+跳板机 47.102.97.180   端口 22     root  Ydzhls#96818
 mysql账号
 rm-uf62l63r712cc2472.mysql.rds.aliyuncs.com
 3306
@@ -30,8 +46,10 @@ prd环境
 root
 Sap#12345
 
-统一密码
+服务器root账号统一密码
 Dev#12345
+潜客管理配置服务器密码
+ydzhls001
 
 
 git相关
@@ -47,8 +65,13 @@ jianling.zhang
 tail -100f /data/smart_retail_asst/qas/log/assistant-log.file > my.log
 tail -100f /data/smart_retail_asst/pre/log/assistant-log.file > my.log
 tail -fn 500 /data/smart_retail_asst/qas/log/assistant-log.file
+tail -fn 500 /data/smart_retail_backend/qas/log/20211023/monitor-web.2021-10-23.info.log
+tail -fn 500 /data/smart_retail_backend/pre/log/20211101/monitor-web.2021-11-01.info.log
+tail -fn 500 /data/smart_retail_asst/qas/log/assistant-task-log.file
 tail -fn 500 /data/smart_retail_asst/pre/log/assistant-log.file
+tail -fn 500 /data/smart_retail_asst/pre/log/assistant-task-log.file
 cat -n /data/smart_retail_asst/qas/log/assistant-log.file  |grep "系统异常"
+cat -n /data/smart_retail_asst/qas/log/assistant-task-log.file  |grep "系统异常"
 tail -n +103337 /data/smart_retail_asst/qas/log/assistant-log.file
 tail -n +362 -n 50 /data/smart_retail_asst/qas/log/assistant-log.file
 cat -n /data/smart_retail_asst/qas/log/assistant-log.file | tail -n +362 | head -n 100
@@ -76,6 +99,9 @@ IP：43.240.124.27
 
 跳板机
 dev     yongda@123
+跳板机
+43.254.46.186:9093
+Dev#12345
 
 QAS环境 tq信息
 https://workphoneuat.yddop.com/#/wxRecord
@@ -87,3 +113,29 @@ yd1009703/YDsap123
 汽车之家开放平台
 https://iys.api.autohome.com.cn/help/
 yongda	yongda123Abc
+
+查看端口进程
+netstat -tunpl |grep 8181
+查询进程详细
+ll /proc/24187
+查询nginx配置路径
+/usr/sbin/nginx -t	/etc/nginx/nginx.conf
+
+QAS环境
+静态文件
+/mnt/device/qas_smartretail/static
+jar文件
+/data/smart_retail_asst/qas/jar/
+jar执行脚本
+/data/smart_retail_asst/qas/build
+jenkins脚本
+/data/jenkinsBuild/smart_retail_build/asst_qas_space/build
+设置目录所有者
+chown -R app qas
+
+潜客日志今晚发版信息如下
+上线分支：prod_asst_advance_20211223
+上线脚本：20211223-1.sql
+潜客日志前端发布工程:asst_ali_vue
+潜客日志后端发布工程:asst_ali
+潜客定时任务发布工程:asst_ali_task

@@ -1,0 +1,41 @@
+linux常用命令
+
+vim编辑命令
+新建文件
+vim 文件名称
+
+文件管理命令
+列出文件信息
+ls files(当前目录文件)
+ls dirs(目录) 
+列出文件详细信息
+ls -l(别名ll)
+列出所有文件详细信息(包含隐藏文件)
+ls -l -a
+修改文件名称
+mv .createFile(原文件,点表示隐藏文件) createFile(新文件)
+按修改时间排序逆序
+ls -l -t --full-time -r
+当前家目录
+cd ~
+当前用户
+whoami
+who am i
+指定用户加目录
+cd ~zjl
+返回切换前的目录
+cd -
+打印当前目录
+pwd
+创建文件夹
+mkdir aaa
+创建文件
+touch aa
+批量创建10个文件
+touch a{1..10}
+创建多级目录
+mkdir -p aaa/bbb/ccc
+复制文件
+cp a1 a2 bbb
+复制文件夹
+cp -r bbb ddd

@@ -3,9 +3,35 @@
 我的潜客-呼叫-backmanage/holly/call
 展厅-完善客户资料-按钮是否显示-/findWhetherToJump
 展厅-保存客户-/editCustomerAdvisoryQuestion
+线索筛选（有潜客）-/wechat/clueManagement/distributeConstants
+
+创建潜客-wechat/createCustomer/addPotentialCustomer
+创建潜客(非垂媒)-/wechat/clueManagement/distributeConstants
+更新潜客-wechat/createCustomer/updatePotentialCustomer
 
 本地微信登录
-http://localhost:8080/smartretailasst/login/wechat?userId=18320779255&appType=asstWechat&param=null&error=false
+http://localhost:8080/smartretailasst/login/wechat?userId=18320779255&appType=asstWechat&param=%26wechatpushtype%3Dchatpotential&error=false
+Q环境气泡
+https://e4sqas.yddop.com/smartretailasst/login/wechat?userId=hzs&appType=asstWechat&param=%26wechatpushtype%3Dchatpotential&error=false
+
+试驾审核参数
+wechatpushtype=testdriveexaminelist
+d2VjaGF0cHVzaHR5cGU9dGVzdGRyaXZlZXhhbWluZWxpc3Q=
+
+聊天到潜客详情
+wechatpushtype=chatpotential
+d2VjaGF0cHVzaHR5cGU9Y2hhdHBvdGVudGlhbA==
+
+String moduleUrl ="wechatpushtype=chatpotential";
+		byte[]  base64Data1 = Base64.getEncoder().encode(moduleUrl.getBytes());
+		moduleUrl = new String(base64Data1, Constants.ENCODE_FORMAT);
+		moduleUrl =moduleUrl;
+		log.info("解码前企业微信参数，module：{}", moduleUrl);
+		byte[] base64Data = Base64.getDecoder().decode(moduleUrl);
+		moduleUrl = new String(base64Data, Constants.ENCODE_FORMAT);
+		log.info("解码后企业微信参数，module：{}", moduleUrl);
+
+%26wechatpushtype%3Dchatpotential
 本地多门店查询
 http://localhost:8080/smartretailasst/login/queryAccountList
 
@@ -15,3 +41,5 @@ https://e4sqas.yddop.com/assistantWechat/#/component/potentialLogbc?token=0f4d96
 https://e4spre.yddop.com/assistantWechat/#/component/potentialLogbc?token=a2a62bcf679c6f18b6b2f180a75445b4
 
 https://e4s.yddop.com/assistantWechat/#/component/potentialLogbc?token=e39c8f416569eeab3518e3d2c572f333
+//转存连接
+https://e4s.yddop.com/ztglWechat/index.html?token=43fd8b4cf57edb85ec0c0e0e8d0bd8bc&tabFlag=0&potentialId=204947#/component/pFollow?id=183712&belongPerson=10289&wechatHead=&name=%E6%9D%A8%E6%9D%8E&mobilePhone=18100680568&dopName=%E5%AD%99%E5%9B%BD%E9%BE%99&examineType=158001&updateTime=2021-09-02%2016%3A10%3A07&transfersSaveApplyPerson=10289&transfersSaveApplyPersonName=%E5%AD%99%E5%9B%BD%E9%BE%99&transferApplyPerson&transferApplyPersonName
