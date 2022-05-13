@@ -133,10 +133,10 @@ select * from ((select
         group by t3.id)) customers order by customers.timeLeft,callTimes,customers.id	
 -- 判断是否有重复同步的账号
 select t1.* from tbl_employee t1 LEFT JOIN tbl_employee t2 on t1.id != t2.id and t1.dop_name = t2.dop_name and t1.mobile_phone = t2.mobile_phone
-where  t1.store_id = 491 and  t2.store_id = 491
+where  t1.store_id = 574 and  t2.store_id = 574
 
 select t1.* from tbl_employee t1 LEFT JOIN tbl_employee t2 on t1.id != t2.id and t1.dop_user_id = t2.dop_user_id 
-where  t1.store_id = 274 and  t2.store_id = 274
+where  t1.store_id = 574 and  t2.store_id = 574
 
 select id,dop_user_id,dop_name,store_id,mobile_phone from tbl_employee where dop_name in (select t1.dop_name from tbl_employee t1 LEFT JOIN tbl_employee t2 on t1.id != t2.id 
 where t1.dop_name = t2.dop_name and t1.mobile_phone = t2.mobile_phone and t1.store_id = t2.store_id) order by dop_name
@@ -180,3 +180,16 @@ select (select dic_name from tbl_dictionary where dic_code = history_type),(sele
 select (select dic_name from tbl_dictionary where dic_code = history_type),(select dic_name from tbl_dictionary where dic_code = trend_type),
 (select dop_name from tbl_employee te where te.id = taf.follow_person) as '跟进人',(select dop_name from tbl_employee  te where te.id = cast(taf.create_user as SIGNED)) as '创建人',taf.follow_time,tpc.`name`,tpc.mobile_phone,tpc.clue_type
 from tbl_a_follow taf  left join tbl_potential_customer tpc on taf.potential_id = tpc.id where tpc.store_id = 302 and trend_type = 150003 and date_format(taf.follow_time,'%Y-%m') = '2021-11'  order by taf.create_time desc
+--DOP账号信息
+select ce.p_name,ce.p_mobile
+,ys.p_uid,ce.p_personattribute,ce.PK, ce.p_uid as pUid, ce.p_mobile as pMobile, ce.p_account as pAccount, ce.passwd, ce.p_department as pDepartment,
+    ce.p_departmentname as pDepartmentname, ce.p_profilepicture as pProfilepicture,
+    ce.p_name as pName, ce.p_ydstore as pYdstore, ce.p_sex as pSex, ce.p_Jobtitlename as pJobtitlename,
+    ce.p_description as pDescription, ce.p_personstatus as pPersonstatus, ce.p_personattribute as pPersonattribute, ev.Code as statusCode,
+    ys.p_name as storeName, ys.p_uid as storeUid
+    from companyemploye ce
+    left join enumerationvalues ev on ev.PK = ce.p_personstatus
+    left join ydstore ys on ys.PK = ce.p_ydstore
+    where 1=1 and
+-- 		ce.p_mobile = '13641970861'
+ce.p_name = '俞利聪'	

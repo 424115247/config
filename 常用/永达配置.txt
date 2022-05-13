@@ -27,8 +27,9 @@ prdmongo
 
 桥接地址：
 43.254.46.186
-9093
+9093/9094
 root
+Dev#12345
 
 连接信息-开发环境
 192.168.0.144
@@ -65,7 +66,7 @@ jianling.zhang
 tail -100f /data/smart_retail_asst/qas/log/assistant-log.file > my.log
 tail -100f /data/smart_retail_asst/pre/log/assistant-log.file > my.log
 tail -fn 500 /data/smart_retail_asst/qas/log/assistant-log.file
-tail -fn 500 /data/smart_retail_backend/qas/log/20211023/monitor-web.2021-10-23.info.log
+tail -fn 500 /data/smart_retail_backend/qas/log/20220314/monitor-web.2022-03-14.info.log
 tail -fn 500 /data/smart_retail_backend/pre/log/20211101/monitor-web.2021-11-01.info.log
 tail -fn 500 /data/smart_retail_asst/qas/log/assistant-task-log.file
 tail -fn 500 /data/smart_retail_asst/pre/log/assistant-log.file
@@ -102,10 +103,17 @@ dev     yongda@123
 跳板机
 43.254.46.186:9093
 Dev#12345
+新
+用户名
+hybrisdev001
+密码
+dev001#001
+
 
 QAS环境 tq信息
 https://workphoneuat.yddop.com/#/wxRecord
 Ydtest Ydtest@123
+ydceshi qi.work
 
 https://ecm.yddop.com/
 yd1009703/YDsap123
@@ -139,3 +147,18 @@ chown -R app qas
 潜客日志前端发布工程:asst_ali_vue
 潜客日志后端发布工程:asst_ali
 潜客定时任务发布工程:asst_ali_task
+
+redis连接
+docker exec -it 0e5b41914366 redis-cli -p 6379
+
+售后管理配置连接服务器
+PRE环境
+ssh -p 22 root@192.168.30.20
+ydzhls001
+QAS环境
+ssh -p 22 root@192.168.20.49
+ydzhls001
+
+重启Q潜客定时任务项目
+
+java -Xms512m -Xmx512m -jar /data/smart_retail_asst/qas/jar/assistant-task.jar  --spring.profiles.active=qas  > /data/smart_retail_asst/qas/log/assistant-task-log.file 2>/data/smart_retail_asst/qas/log/assistant-task-log.error &
